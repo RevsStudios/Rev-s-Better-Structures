@@ -13,7 +13,7 @@ What are the biggest structures that can be found?
 The windmil and the Barn
 
 Who develops this mod?
-Our community, with the community builds and the builders ( Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and Rev! )
+Our community, with the community builds, the builders ( Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and Rev! ) And the Coders ( ReVG08 and Blackout. )
 
 How can I help the mod improve without buying a bisect server?
 By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
