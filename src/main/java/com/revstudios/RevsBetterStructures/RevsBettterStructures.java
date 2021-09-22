@@ -19,9 +19,9 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("examplemod")
-public class RevsBettterStructures
-{
+@Mod("revs_better_structures")
+public class RevsBettterStructures{
+	
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
 
