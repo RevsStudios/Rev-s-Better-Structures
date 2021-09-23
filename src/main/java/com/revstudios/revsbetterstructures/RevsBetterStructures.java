@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures;
+package com.revstudios.RevsBetterStructures;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
