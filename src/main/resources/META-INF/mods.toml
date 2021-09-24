@@ -6,9 +6,8 @@ license="All rights reserved"
 modId="revsbetterstructures"
 version="1.4" 
 displayName="Rev's Better Structures" 
-description='''
-Rev's Better structures add new and refreshed structures to Minecraft!
-'''
+description='''Rev's Better structures add new and refreshed structures to Minecraft!'''
+itemIcon="minecraft:cobblestone"
 
 [[dependencies.revsbetterstructures]]
     modId="forge"

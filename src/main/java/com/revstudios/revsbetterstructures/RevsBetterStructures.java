@@ -1,6 +1,10 @@
-package com.revstudios.RevsBetterStructures;
+package com.revstudios.revsbetterstructures;
 
+import com.revstudios.revsbetterstructures.events.CommonSetupEvent;
+import com.revstudios.revsbetterstructures.registry.RevsStructures;
+import com.revstudios.revsbetterstructures.worldgen.BiomeLoadEventSubscriber;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -24,6 +28,14 @@ public class RevsBetterStructures{
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //Register to the mod event bus
+        eventBus.addListener(CommonSetupEvent::onFMLCommonSetupEvent);
+
+        RevsStructures.STRUCTURES.register(eventBus);
+
+        //Register to the forge event bus
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, CommonSetupEvent::addDimensionalSpacing);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BiomeLoadEventSubscriber::onBiomeLoadingEvent);
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
