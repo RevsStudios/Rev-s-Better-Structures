@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures.registry;
+package cf.revstudios.revsbetterstructures.registry;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;

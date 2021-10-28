@@ -1,6 +1,6 @@
-package com.revstudios.revsbetterstructures.registry;
+package cf.revstudios.revsbetterstructures.registry;
 
-import com.revstudios.revsbetterstructures.RevsBetterStructures;
+import cf.revstudios.revsbetterstructures.RevsBetterStructures;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -14,7 +14,7 @@ public class RevsConfiguredStructures {
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
-        Registry.register(registry, new ResourceLocation(revsbetterstructures.MODID, "configured_windmill"), CONFIGURED_WINDMILL);
+        Registry.registerSimple(registry, new ResourceLocation(revsbetterstructures.MODID, "configured_windmill"), CONFIGURED_WINDMILL);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
     }

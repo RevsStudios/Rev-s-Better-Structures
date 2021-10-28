@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures.worldgen;
+package cf.revstudios.revsbetterstructures.worldgen;
 
 import com.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
 import net.minecraft.util.RegistryKey;

@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures.worldgen.structures;
+package cf.revstudios.revsbetterstructures.worldgen.structures;
 
 import com.mojang.serialization.Codec;
 import com.revstudios.revsbetterstructures.RevsBetterStructures;

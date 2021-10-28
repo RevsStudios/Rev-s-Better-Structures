@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures.events;
+package cf.revstudios.revsbetterstructures.events;
 
 import com.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
 import com.revstudios.revsbetterstructures.registry.RevsStructures;
