@@ -1,4 +1,4 @@
-package com.revstudios.revsbetterstructures;
+package com.revstudios.RevsBetterStructures;
 
 import com.revstudios.revsbetterstructures.events.CommonSetupEvent;
 import com.revstudios.revsbetterstructures.registry.RevsStructures;
@@ -12,15 +12,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("revsbetterstructures")
-public class RevsBetterStructures{
+public class revsbetterstructures{
 
     public static final String MODID = "revsbetterstructures";
     public static final String MODNAME = "Revs Better Structures";
     public static final String VERSION = "1.0.0";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static RevsBetterStructures INSTANCE;
+    public static revsbetterstructures INSTANCE;
 
-    public RevsBetterStructures() {
+    public revsbetterstructures() {
         INSTANCE = this;
 
         LOGGER.debug(MODNAME + " Version is: " + VERSION);
