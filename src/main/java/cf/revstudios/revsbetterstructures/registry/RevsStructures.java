@@ -2,8 +2,8 @@ package cf.revstudios.revsbetterstructures.registry;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.revstudios.revsbetterstructures.RevsBetterStructures;
-import com.revstudios.revsbetterstructures.worldgen.structures.SurfaceDungeonStructure;
+import cf.revstudios.revsbetterstructures.RevsBetterStructures;
+import cf.revstudios.revsbetterstructures.worldgen.structures.SurfaceDungeonStructure;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
