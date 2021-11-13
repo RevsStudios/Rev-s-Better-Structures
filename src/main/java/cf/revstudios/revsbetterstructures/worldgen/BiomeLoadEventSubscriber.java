@@ -1,6 +1,6 @@
 package cf.revstudios.revsbetterstructures.worldgen;
 
-import com.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
+import cf.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;

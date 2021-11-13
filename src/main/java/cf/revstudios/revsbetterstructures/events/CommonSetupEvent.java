@@ -18,7 +18,6 @@ import java.util.Map;
 
 public class CommonSetupEvent {
 
-
     private static Method codecMethod;
 
     public static void onFMLCommonSetupEvent(final FMLCommonSetupEvent event) {

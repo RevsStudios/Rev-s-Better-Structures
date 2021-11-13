@@ -14,7 +14,7 @@ public class RevsConfiguredStructures {
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
-        Registry.registerSimple(registry, new ResourceLocation(revsbetterstructures.MODID, "configured_windmill"), CONFIGURED_WINDMILL);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_windmill"), CONFIGURED_WINDMILL);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
     }

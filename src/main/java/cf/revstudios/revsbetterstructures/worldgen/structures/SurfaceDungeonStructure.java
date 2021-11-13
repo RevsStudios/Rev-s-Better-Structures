@@ -1,7 +1,7 @@
 package cf.revstudios.revsbetterstructures.worldgen.structures;
 
-import com.mojang.serialization.Codec;
 import cf.revstudios.revsbetterstructures.RevsBetterStructures;
+import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
@@ -70,7 +70,7 @@ public class SurfaceDungeonStructure extends Structure<NoFeatureConfig> {
 			boolean netherFlag = biomeIn.getBiomeCategory() == Category.NETHER; 
 			BlockPos blockpos = new BlockPos(x, 0, z);
 			JigsawManager.addPieces(dynamicRegistryManager,
-				new VillageConfig(() -> dynamicRegistryManager.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY).get(new ResourceLocation(revsbetterstructures.MODID, path)), 10), AbstractVillagePiece::new,
+				new VillageConfig(() -> dynamicRegistryManager.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY).get(new ResourceLocation(RevsBetterStructures.MODID, path)), 10), AbstractVillagePiece::new,
 				chunkGenerator, templateManagerIn,netherFlag ? SurfaceDungeonStructure.getGround(chunkGenerator, chunkGenerator.getBaseColumn((chunkX << 4) + 7, (chunkZ << 4) + 7), chunkX, chunkZ) : blockpos,
 				pieces, random, false, netherFlag ? false : true);
 			

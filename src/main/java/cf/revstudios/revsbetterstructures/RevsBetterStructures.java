@@ -1,6 +1,7 @@
 package cf.revstudios.revsbetterstructures;
 
 import cf.revstudios.revsbetterstructures.events.CommonSetupEvent;
+import cf.revstudios.revsbetterstructures.registry.RevsStructures;
 import cf.revstudios.revsbetterstructures.worldgen.BiomeLoadEventSubscriber;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -30,7 +31,7 @@ public class RevsBetterStructures {
         //Register to the mod event bus
         eventBus.addListener(CommonSetupEvent::onFMLCommonSetupEvent);
 
-        RevsBetterStructures.STRUCTURES.register(eventBus);
+        RevsStructures.STRUCTURES.register(eventBus);
 
         //Register to the forge event bus
         MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, CommonSetupEvent::addDimensionalSpacing);
