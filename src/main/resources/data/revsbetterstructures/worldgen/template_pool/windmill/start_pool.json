@@ -1,5 +1,5 @@
 {
-  "name": "chaosawakens:windmill/start_pool",
+  "name": "revsbetterstructures:windmill/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
