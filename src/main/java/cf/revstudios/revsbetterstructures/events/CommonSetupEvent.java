@@ -1,7 +1,7 @@
 package cf.revstudios.revsbetterstructures.events;
 
-import com.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
-import com.revstudios.revsbetterstructures.registry.RevsStructures;
+import cf.revstudios.revsbetterstructures.registry.RevsConfiguredStructures;
+import cf.revstudios.revsbetterstructures.registry.RevsStructures;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.FlatChunkGenerator;
 import net.minecraft.world.gen.feature.structure.Structure;

@@ -1,7 +1,7 @@
 package cf.revstudios.revsbetterstructures.worldgen.structures;
 
 import com.mojang.serialization.Codec;
-import com.revstudios.revsbetterstructures.RevsBetterStructures;
+import cf.revstudios.revsbetterstructures.RevsBetterStructures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
