@@ -28,6 +28,7 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> BLUETEEPE = STRUCTURES.register("blueteepe", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "blueteepe/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> BROWNTEEPE = STRUCTURES.register("brownteepe", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "brownteepe/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> YELLOWTEEPE = STRUCTURES.register("yellowteepe", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "yellowteepe/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> COTTAGE = STRUCTURES.register("cottage", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "cottage/start_pool")));
 
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(327, 325, 32034987), true);
@@ -37,6 +38,7 @@ public class RevsStructures {
         setupMapSpacingAndLand(BLUETEEPE.get(), new StructureSeparationSettings(492, 487, 85414654), true);
         setupMapSpacingAndLand(BROWNTEEPE.get(), new StructureSeparationSettings(458, 450, 61541645), true);
         setupMapSpacingAndLand(YELLOWTEEPE.get(), new StructureSeparationSettings(450, 440, 65165748), true);
+        setupMapSpacingAndLand(COTTAGE.get(), new StructureSeparationSettings(312, 304, 54654156), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {
