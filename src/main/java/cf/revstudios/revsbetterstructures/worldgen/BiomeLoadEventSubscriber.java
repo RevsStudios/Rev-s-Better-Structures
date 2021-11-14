@@ -26,6 +26,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WINDMILL);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SMALLHOUSE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_CASTLE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BARN);
 			}
 		}
 	}
