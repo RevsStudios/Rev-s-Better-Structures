@@ -24,6 +24,7 @@ public class BiomeLoadEventSubscriber {
 
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OVERWORLD)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WINDMILL);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SMALLHOUSE);
 			}
 		}
 	}

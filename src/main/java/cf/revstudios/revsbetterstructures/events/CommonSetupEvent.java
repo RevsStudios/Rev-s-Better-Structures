@@ -39,6 +39,7 @@ public class CommonSetupEvent {
         Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(chunkProvider.generator.getSettings().structureConfig());
 
         tempMap.putIfAbsent(RevsStructures.WINDMILL.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.WINDMILL.get()));
+        tempMap.putIfAbsent(RevsStructures.SMALLHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SMALLHOUSE.get()));
 
         chunkProvider.generator.getSettings().structureConfig = tempMap;
     }
