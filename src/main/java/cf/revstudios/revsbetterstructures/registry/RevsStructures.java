@@ -25,12 +25,14 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> SMALLHOUSE = STRUCTURES.register("smallhouse", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "smallhouse/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> CASTLE = STRUCTURES.register("castle", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "castle/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> BARN = STRUCTURES.register("barn", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "barn/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> BLUETEEPE = STRUCTURES.register("blueteepe", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "blueteepe/start_pool")));
 
     public static void setupStructures() {
-        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(127, 125, 32034987), true);
-        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(96, 94, 45165474), true);
-        setupMapSpacingAndLand(CASTLE.get(), new StructureSeparationSettings(102, 100, 98156546), true);
-        setupMapSpacingAndLand(BARN.get(), new StructureSeparationSettings(202, 200, 15616465), true);
+        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(227, 225, 32034987), true);
+        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(196, 194, 45165474), true);
+        setupMapSpacingAndLand(CASTLE.get(), new StructureSeparationSettings(202, 200, 98156546), true);
+        setupMapSpacingAndLand(BARN.get(), new StructureSeparationSettings(302, 300, 15616465), true);
+        setupMapSpacingAndLand(BLUETEEPE.get(), new StructureSeparationSettings(302, 300, 85414654), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {

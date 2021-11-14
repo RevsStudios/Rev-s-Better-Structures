@@ -42,6 +42,7 @@ public class CommonSetupEvent {
         tempMap.putIfAbsent(RevsStructures.SMALLHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SMALLHOUSE.get()));
         tempMap.putIfAbsent(RevsStructures.CASTLE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.CASTLE.get()));
         tempMap.putIfAbsent(RevsStructures.BARN.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BARN.get()));
+        tempMap.putIfAbsent(RevsStructures.BLUETEEPE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BLUETEEPE.get()));
 
         chunkProvider.generator.getSettings().structureConfig = tempMap;
     }
