@@ -22,7 +22,7 @@ public class BiomeLoadEventSubscriber {
 
 			RegistryKey<Biome> biome = RegistryKey.create(ForgeRegistries.Keys.BIOMES, Objects.requireNonNull(event.getName(), "Who registered null name biome, naming criticism!"));
 
-			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OVERWORLD)) {
+			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OVERWORLD) && !BiomeDictionary.hasType(biome, BiomeDictionary.Type.OCEAN)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WINDMILL);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SMALLHOUSE);
 			}
