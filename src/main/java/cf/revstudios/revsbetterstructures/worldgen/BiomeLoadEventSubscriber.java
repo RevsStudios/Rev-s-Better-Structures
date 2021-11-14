@@ -28,6 +28,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_CASTLE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BARN);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BLUETEEPE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BROWNTEEPE);
 			}
 		}
 	}
