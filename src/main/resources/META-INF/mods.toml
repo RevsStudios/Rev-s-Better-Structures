@@ -4,7 +4,7 @@ license="All rights reserved"
 
 [[mods]]
 modId="revsbetterstructures"
-version="1.4" 
+version="1.4 Preview 1"
 displayName="Rev's Better Structures" 
 description='''Rev's Better structures add new and refreshed structures to Minecraft!'''
 itemIcon="minecraft:cobblestone"
