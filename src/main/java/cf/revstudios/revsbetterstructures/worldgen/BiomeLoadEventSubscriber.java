@@ -32,6 +32,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_YELLOWTEEPE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_COTTAGE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WANDERCAMP);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROUNDEDHOUSE);
 			}
 		}
 	}
