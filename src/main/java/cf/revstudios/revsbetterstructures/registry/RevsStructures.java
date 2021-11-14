@@ -23,10 +23,12 @@ public class RevsStructures {
 
     public static final RegistryObject<Structure<NoFeatureConfig>> WINDMILL = STRUCTURES.register("windmill", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "windmill/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> SMALLHOUSE = STRUCTURES.register("smallhouse", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "smallhouse/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> CASTLE = STRUCTURES.register("castle", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "castle/start_pool")));
 
     public static void setupStructures() {
-        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(27, 25, 32034987), true);
-        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(56, 54, 45165474), true);
+        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(127, 125, 32034987), true);
+        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(96, 94, 45165474), true);
+        setupMapSpacingAndLand(CASTLE.get(), new StructureSeparationSettings(102, 100, 98156546), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {

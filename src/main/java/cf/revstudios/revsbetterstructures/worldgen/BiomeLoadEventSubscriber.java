@@ -25,6 +25,7 @@ public class BiomeLoadEventSubscriber {
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.OVERWORLD) && !BiomeDictionary.hasType(biome, BiomeDictionary.Type.OCEAN)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WINDMILL);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SMALLHOUSE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_CASTLE);
 			}
 		}
 	}

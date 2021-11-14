@@ -12,13 +12,16 @@ public class RevsConfiguredStructures {
 
     public static StructureFeature<?, ?> CONFIGURED_WINDMILL = RevsStructures.WINDMILL.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_SMALLHOUSE = RevsStructures.SMALLHOUSE.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_CASTLE = RevsStructures.CASTLE.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_windmill"), CONFIGURED_WINDMILL);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_smallhouse"), CONFIGURED_SMALLHOUSE);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_castle"), CONFIGURED_CASTLE);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_SMALLHOUSE);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_CASTLE);
     }
 }
