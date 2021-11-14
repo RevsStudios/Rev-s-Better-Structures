@@ -42,7 +42,7 @@ public class RevsStructures {
         setupMapSpacingAndLand(YELLOWTEEPE.get(), new StructureSeparationSettings(450, 440, 65165748), true);
         setupMapSpacingAndLand(COTTAGE.get(), new StructureSeparationSettings(312, 304, 54654156), true);
         setupMapSpacingAndLand(WANDERCAMP.get(), new StructureSeparationSettings(328, 314, 61567486), true);
-        setupMapSpacingAndLand(ROUNDEDHOUSE.get(), new StructureSeparationSettings(398, 354, 45476451), true);
+        setupMapSpacingAndLand(ROUNDEDHOUSE.get(), new StructureSeparationSettings(398, 364, 45476451), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {
