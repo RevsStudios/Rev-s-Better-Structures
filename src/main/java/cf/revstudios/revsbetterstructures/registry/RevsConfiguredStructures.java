@@ -20,6 +20,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_COTTAGE = RevsStructures.COTTAGE.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_WANDERCAMP = RevsStructures.WANDERCAMP.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_ROUNDEDHOUSE = RevsStructures.ROUNDEDHOUSE.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_TENTGREEN = RevsStructures.TENTGREEN.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -33,6 +34,7 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_cottage"), CONFIGURED_COTTAGE);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_wandercamp"), CONFIGURED_WANDERCAMP);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_roundedhouse"), CONFIGURED_ROUNDEDHOUSE);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_tentgreen"), CONFIGURED_TENTGREEN);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_SMALLHOUSE);
@@ -44,5 +46,6 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.COTTAGE.get(), CONFIGURED_COTTAGE);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WANDERCAMP.get(), CONFIGURED_WANDERCAMP);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.ROUNDEDHOUSE.get(), CONFIGURED_ROUNDEDHOUSE);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.TENTGREEN.get(), CONFIGURED_TENTGREEN);
     }
 }
