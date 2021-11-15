@@ -35,18 +35,18 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> TENTRED = STRUCTURES.register("tentred", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "tentred/start_pool")));
 
     public static void setupStructures() {
-        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(327, 325, 32034987), true);
-        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(296, 294, 45165474), true);
-        setupMapSpacingAndLand(CASTLE.get(), new StructureSeparationSettings(306, 300, 98156546), true);
-        setupMapSpacingAndLand(BARN.get(), new StructureSeparationSettings(415, 410, 15616465), true);
-        setupMapSpacingAndLand(BLUETEEPE.get(), new StructureSeparationSettings(492, 487, 85414654), true);
-        setupMapSpacingAndLand(BROWNTEEPE.get(), new StructureSeparationSettings(458, 450, 61541645), true);
-        setupMapSpacingAndLand(YELLOWTEEPE.get(), new StructureSeparationSettings(450, 440, 65165748), true);
-        setupMapSpacingAndLand(COTTAGE.get(), new StructureSeparationSettings(312, 304, 54654156), true);
-        setupMapSpacingAndLand(WANDERCAMP.get(), new StructureSeparationSettings(328, 314, 61567486), true);
-        setupMapSpacingAndLand(ROUNDEDHOUSE.get(), new StructureSeparationSettings(398, 364, 45476451), true);
-        setupMapSpacingAndLand(TENTGREEN.get(), new StructureSeparationSettings(500, 486, 15368478), true);
-        setupMapSpacingAndLand(TENTRED.get(), new StructureSeparationSettings(500, 486, 648498484), true);
+        setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(427, 425, 3203498), true);
+        setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(396, 394, 451654774), true);
+        setupMapSpacingAndLand(CASTLE.get(), new StructureSeparationSettings(406, 400, 9815654), true);
+        setupMapSpacingAndLand(BARN.get(), new StructureSeparationSettings(515, 510, 1561645665), true);
+        setupMapSpacingAndLand(BLUETEEPE.get(), new StructureSeparationSettings(592, 587, 85414654), true);
+        setupMapSpacingAndLand(BROWNTEEPE.get(), new StructureSeparationSettings(558, 550, 6154165), true);
+        setupMapSpacingAndLand(YELLOWTEEPE.get(), new StructureSeparationSettings(550, 540, 651657648), true);
+        setupMapSpacingAndLand(COTTAGE.get(), new StructureSeparationSettings(412, 404, 546541566), true);
+        setupMapSpacingAndLand(WANDERCAMP.get(), new StructureSeparationSettings(428, 414, 6157486), true);
+        setupMapSpacingAndLand(ROUNDEDHOUSE.get(), new StructureSeparationSettings(498, 464, 454706451), true);
+        setupMapSpacingAndLand(TENTGREEN.get(), new StructureSeparationSettings(600, 586, 1536878), true);
+        setupMapSpacingAndLand(TENTRED.get(), new StructureSeparationSettings(600, 586, 648498484), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {
