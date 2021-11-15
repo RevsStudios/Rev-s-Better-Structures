@@ -22,6 +22,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_ROUNDEDHOUSE = RevsStructures.ROUNDEDHOUSE.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_TENTGREEN = RevsStructures.TENTGREEN.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_TENTRED = RevsStructures.TENTRED.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE = RevsStructures.RUINEDHOUSE.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -37,6 +38,7 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_roundedhouse"), CONFIGURED_ROUNDEDHOUSE);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_tentgreen"), CONFIGURED_TENTGREEN);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_tentred"), CONFIGURED_TENTRED);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse"), CONFIGURED_RUINEDHOUSE);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_SMALLHOUSE);
@@ -50,5 +52,6 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.ROUNDEDHOUSE.get(), CONFIGURED_ROUNDEDHOUSE);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.TENTGREEN.get(), CONFIGURED_TENTGREEN);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.TENTRED.get(), CONFIGURED_TENTRED);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE.get(), CONFIGURED_RUINEDHOUSE);
     }
 }
