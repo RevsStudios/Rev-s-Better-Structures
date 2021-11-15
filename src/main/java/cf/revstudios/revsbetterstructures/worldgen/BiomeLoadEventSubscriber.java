@@ -36,6 +36,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_TENTGREEN);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_TENTRED);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE2);
 			}
 		}
 	}

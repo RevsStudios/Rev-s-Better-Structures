@@ -23,6 +23,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_TENTGREEN = RevsStructures.TENTGREEN.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_TENTRED = RevsStructures.TENTRED.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE = RevsStructures.RUINEDHOUSE.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE2 = RevsStructures.RUINEDHOUSE2.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -39,6 +40,7 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_tentgreen"), CONFIGURED_TENTGREEN);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_tentred"), CONFIGURED_TENTRED);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse"), CONFIGURED_RUINEDHOUSE);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse2"), CONFIGURED_RUINEDHOUSE2);
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_SMALLHOUSE);
