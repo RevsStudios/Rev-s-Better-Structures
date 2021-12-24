@@ -25,6 +25,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE = RevsStructures.RUINEDHOUSE.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE2 = RevsStructures.RUINEDHOUSE2.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE3 = RevsStructures.RUINEDHOUSE3.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_SPRUCETOWER = RevsStructures.SPRUCETOWER.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -43,6 +44,8 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse"), CONFIGURED_RUINEDHOUSE);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse2"), CONFIGURED_RUINEDHOUSE2);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse3"), CONFIGURED_RUINEDHOUSE3);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_sprucetower"), CONFIGURED_SPRUCETOWER);
+
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SMALLHOUSE.get(), CONFIGURED_SMALLHOUSE);
@@ -59,5 +62,6 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE.get(), CONFIGURED_RUINEDHOUSE);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE2.get(), CONFIGURED_RUINEDHOUSE2);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE3.get(), CONFIGURED_RUINEDHOUSE3);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SPRUCETOWER.get(), CONFIGURED_SPRUCETOWER);
     }
 }

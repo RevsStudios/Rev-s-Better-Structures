@@ -38,6 +38,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE2);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE3);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SPRUCETOWER);
 			}
 		}
 	}
