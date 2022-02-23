@@ -1,0 +1,15 @@
+{
+  "name": "revsbetterstructures:netherbiome_crimson/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "revsbetterstructures:netherbiome_crimson",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

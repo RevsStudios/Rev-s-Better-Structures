@@ -1,9 +1,9 @@
 package cf.revstudios.revsbetterstructures.registry;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import cf.revstudios.revsbetterstructures.RevsBetterStructures;
 import cf.revstudios.revsbetterstructures.worldgen.structures.SurfaceDungeonStructure;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.Objects;
 
 public class RevsStructures {
-
     public static final DeferredRegister<Structure<?>> STRUCTURES = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, RevsBetterStructures.MODID);
 
     public static final RegistryObject<Structure<NoFeatureConfig>> WINDMILL = STRUCTURES.register("windmill", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "windmill/start_pool")));
@@ -37,6 +36,9 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> RUINEDHOUSE2 = STRUCTURES.register("ruinedhouse2", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "ruinedhouse2/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> RUINEDHOUSE3 = STRUCTURES.register("ruinedhouse3", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "ruinedhouse3/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> SPRUCETOWER = STRUCTURES.register("sprucetower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "sprucetower/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> NETHERTOWER = STRUCTURES.register("nethertower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "nethertower/start_pool")));
+//    public static final RegistryObject<Structure<NoFeatureConfig>> NETHERBIOME_CRIMSON = STRUCTURES.register("netherbiome_crimson", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "netherbiome_crimson/start_pool")));
+//    public static final RegistryObject<Structure<NoFeatureConfig>> NETHERBIOME_WARPED = STRUCTURES.register("netherbiome_warped", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "netherbiome_warped/start_pool")));
 
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(827, 825, 3203498), true);
@@ -55,6 +57,9 @@ public class RevsStructures {
         setupMapSpacingAndLand(RUINEDHOUSE2.get(), new StructureSeparationSettings(586, 550, 691545156), true);
         setupMapSpacingAndLand(RUINEDHOUSE3.get(), new StructureSeparationSettings(586, 550, 23485623), true);
         setupMapSpacingAndLand(SPRUCETOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
+        setupMapSpacingAndLand(NETHERTOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
+//        setupMapSpacingAndLand(NETHERBIOME_CRIMSON.get(), new StructureSeparationSettings(732, 941, 46723646), true);
+//        setupMapSpacingAndLand(NETHERBIOME_WARPED.get(), new StructureSeparationSettings(795, 890, 8545784), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {

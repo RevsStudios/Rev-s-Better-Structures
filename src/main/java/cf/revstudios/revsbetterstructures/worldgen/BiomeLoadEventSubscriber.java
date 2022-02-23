@@ -40,6 +40,11 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE3);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SPRUCETOWER);
 			}
+			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.NETHER)) {
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERTOWER);
+//				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERBIOME_CRIMSON);
+//				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERBIOME_WARPED);
+			}
 		}
 	}
 }

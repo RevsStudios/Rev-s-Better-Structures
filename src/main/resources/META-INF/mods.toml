@@ -1,24 +1,27 @@
 modLoader="javafml" 
 loaderVersion="[36,)" 
-license="All rights reserved"
+issueTrackerURL="https://github.com/RevsStudios/Rev-s-Better-Structures/issues"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/revs-better-structures"
+license="All Rights Reserved."
 
 [[mods]]
 modId="revsbetterstructures"
-version="1.4 Preview 1"
-displayName="Rev's Better Structures" 
+version="${file.jarVersion}"
+authors="ReVG08 and Blackout"
+displayName="Rev's Better Structures"
 description='''Rev's Better structures add new and refreshed structures to Minecraft!'''
 itemIcon="minecraft:cobblestone"
 
 [[dependencies.revsbetterstructures]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36,)"
-    ordering="NONE"
-    side="BOTH"
+modId="forge"
+mandatory=true
+versionRange="[36.2.20,)"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies.revsbetterstructures]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.5,1.17)"
-    ordering="NONE"
-    side="BOTH"
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5,1.17)"
+ordering="NONE"
+side="BOTH"
