@@ -19,7 +19,6 @@ import java.util.Optional;
 
 @Mod("revsbetterstructures")
 public class RevsBetterStructures {
-
     public static final String MODID = "revsbetterstructures";
     public static final String MODNAME = "Revs Better Structures";
     public static ArtifactVersion VERSION = null;
