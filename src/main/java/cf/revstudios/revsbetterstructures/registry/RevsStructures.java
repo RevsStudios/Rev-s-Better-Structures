@@ -37,6 +37,7 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> RUINEDHOUSE3 = STRUCTURES.register("ruinedhouse3", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "ruinedhouse3/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> SPRUCETOWER = STRUCTURES.register("sprucetower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "sprucetower/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> NETHERTOWER = STRUCTURES.register("nethertower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "nethertower/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> DIORITECHAMP = STRUCTURES.register("dioritechamp", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "dioritechamp/start_pool")));
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(827, 825, 3203498), true);
         setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(396, 394, 451654774), true);
@@ -55,6 +56,7 @@ public class RevsStructures {
         setupMapSpacingAndLand(RUINEDHOUSE3.get(), new StructureSeparationSettings(586, 550, 23485623), true);
         setupMapSpacingAndLand(SPRUCETOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
         setupMapSpacingAndLand(NETHERTOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
+        setupMapSpacingAndLand(DIORITECHAMP.get(), new StructureSeparationSettings(96, 59, 15498198), true);
 //
     }
 

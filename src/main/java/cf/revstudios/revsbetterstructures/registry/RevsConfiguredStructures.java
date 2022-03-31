@@ -26,6 +26,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE3 = RevsStructures.RUINEDHOUSE3.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_SPRUCETOWER = RevsStructures.SPRUCETOWER.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_NETHERTOWER = RevsStructures.NETHERTOWER.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_DIORITECHAMP = RevsStructures.DIORITECHAMP.get().configured(IFeatureConfig.NONE);
 
 
     public static void registerConfiguredStructures() {
@@ -47,6 +48,7 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse3"), CONFIGURED_RUINEDHOUSE3);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_sprucetower"), CONFIGURED_SPRUCETOWER);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_nethertower"), CONFIGURED_NETHERTOWER);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_dioritechamp"), CONFIGURED_DIORITECHAMP);
 //
 
 
@@ -67,6 +69,7 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE3.get(), CONFIGURED_RUINEDHOUSE3);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SPRUCETOWER.get(), CONFIGURED_SPRUCETOWER);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.NETHERTOWER.get(), CONFIGURED_NETHERTOWER);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.DIORITECHAMP.get(), CONFIGURED_DIORITECHAMP);
 //
     }
 }

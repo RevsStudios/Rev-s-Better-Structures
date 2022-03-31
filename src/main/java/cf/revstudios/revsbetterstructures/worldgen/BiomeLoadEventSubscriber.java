@@ -39,6 +39,7 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE2);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE3);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SPRUCETOWER);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_DIORITECHAMP);
 			}
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.NETHER)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERTOWER);
