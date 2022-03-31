@@ -37,9 +37,6 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> RUINEDHOUSE3 = STRUCTURES.register("ruinedhouse3", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "ruinedhouse3/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> SPRUCETOWER = STRUCTURES.register("sprucetower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "sprucetower/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> NETHERTOWER = STRUCTURES.register("nethertower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "nethertower/start_pool")));
-//    public static final RegistryObject<Structure<NoFeatureConfig>> NETHERBIOME_CRIMSON = STRUCTURES.register("netherbiome_crimson", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "netherbiome_crimson/start_pool")));
-//    public static final RegistryObject<Structure<NoFeatureConfig>> NETHERBIOME_WARPED = STRUCTURES.register("netherbiome_warped", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "netherbiome_warped/start_pool")));
-
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(827, 825, 3203498), true);
         setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(396, 394, 451654774), true);
@@ -58,8 +55,7 @@ public class RevsStructures {
         setupMapSpacingAndLand(RUINEDHOUSE3.get(), new StructureSeparationSettings(586, 550, 23485623), true);
         setupMapSpacingAndLand(SPRUCETOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
         setupMapSpacingAndLand(NETHERTOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
-//        setupMapSpacingAndLand(NETHERBIOME_CRIMSON.get(), new StructureSeparationSettings(732, 941, 46723646), true);
-//        setupMapSpacingAndLand(NETHERBIOME_WARPED.get(), new StructureSeparationSettings(795, 890, 8545784), true);
+//
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings, boolean transformSurroundingLand) {

@@ -7,7 +7,7 @@ license="All Rights Reserved."
 [[mods]]
 modId="revsbetterstructures"
 version="${file.jarVersion}"
-authors="ReVG08 and Blackout"
+authors="ReVG08, Blackout, ElectricKhan, Monkeyiskool and all of Rev's Studios"
 displayName="Rev's Better Structures"
 description='''Rev's Better structures add new and refreshed structures to Minecraft!'''
 itemIcon="minecraft:cobblestone"

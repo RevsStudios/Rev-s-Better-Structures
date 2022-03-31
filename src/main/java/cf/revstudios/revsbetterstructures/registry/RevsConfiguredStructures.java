@@ -26,8 +26,7 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_RUINEDHOUSE3 = RevsStructures.RUINEDHOUSE3.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_SPRUCETOWER = RevsStructures.SPRUCETOWER.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_NETHERTOWER = RevsStructures.NETHERTOWER.get().configured(IFeatureConfig.NONE);
-//    public static StructureFeature<?, ?> CONFIGURED_NETHERBIOME_CRIMSON = RevsStructures.NETHERBIOME_CRIMSON.get().configured(IFeatureConfig.NONE);
-//    public static StructureFeature<?, ?> CONFIGURED_NETHERBIOME_WARPED = RevsStructures.NETHERBIOME_WARPED.get().configured(IFeatureConfig.NONE);
+
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -48,8 +47,7 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_ruinedhouse3"), CONFIGURED_RUINEDHOUSE3);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_sprucetower"), CONFIGURED_SPRUCETOWER);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_nethertower"), CONFIGURED_NETHERTOWER);
-//        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_netherbiome_crimson"), CONFIGURED_NETHERBIOME_CRIMSON);
-//        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_netherbiome_warped"), CONFIGURED_NETHERBIOME_WARPED);
+//
 
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);
@@ -69,7 +67,6 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.RUINEDHOUSE3.get(), CONFIGURED_RUINEDHOUSE3);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SPRUCETOWER.get(), CONFIGURED_SPRUCETOWER);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.NETHERTOWER.get(), CONFIGURED_NETHERTOWER);
-//        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.NETHERBIOME_CRIMSON.get(), CONFIGURED_NETHERBIOME_CRIMSON);
-//        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.NETHERBIOME_WARPED.get(), CONFIGURED_NETHERBIOME_WARPED);
+//
     }
 }
