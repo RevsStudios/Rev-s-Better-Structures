@@ -40,6 +40,11 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_RUINEDHOUSE3);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SPRUCETOWER);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_DIORITECHAMP);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_FALLENTREE1);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_FALLENTREE2);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_GIGATREE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_GIGACACTUS);
+
 			}
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.NETHER)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERTOWER);

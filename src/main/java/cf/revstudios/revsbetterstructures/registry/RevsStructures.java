@@ -38,6 +38,11 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> SPRUCETOWER = STRUCTURES.register("sprucetower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "sprucetower/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> NETHERTOWER = STRUCTURES.register("nethertower", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "nethertower/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> DIORITECHAMP = STRUCTURES.register("dioritechamp", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "dioritechamp/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> FALLENTREE1 = STRUCTURES.register("fallentree1", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "fallentree1/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> FALLENTREE2 = STRUCTURES.register("fallentree2", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "fallentree2/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> GIGATREE = STRUCTURES.register("gigatree", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "gigatree/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> GIGACACTUS = STRUCTURES.register("gigacactus", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "gigacactus/start_pool")));
+
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(827, 825, 3203498), true);
         setupMapSpacingAndLand(SMALLHOUSE.get(), new StructureSeparationSettings(396, 394, 451654774), true);
@@ -57,6 +62,10 @@ public class RevsStructures {
         setupMapSpacingAndLand(SPRUCETOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
         setupMapSpacingAndLand(NETHERTOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
         setupMapSpacingAndLand(DIORITECHAMP.get(), new StructureSeparationSettings(96, 59, 15498198), true);
+        setupMapSpacingAndLand(FALLENTREE1.get(), new StructureSeparationSettings(96, 59, 51951594), true);
+        setupMapSpacingAndLand(FALLENTREE2.get(), new StructureSeparationSettings(96, 59, 594518949), true);
+        setupMapSpacingAndLand(GIGATREE.get(), new StructureSeparationSettings(896, 859, 81951651), true);
+        setupMapSpacingAndLand(GIGACACTUS.get(), new StructureSeparationSettings(896, 859, 418494668), true);
 //
     }
 

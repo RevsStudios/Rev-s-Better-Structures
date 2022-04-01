@@ -1,0 +1,15 @@
+{
+  "name": "revsbetterstructures:fallentree2/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "revsbetterstructures:fallentree2",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

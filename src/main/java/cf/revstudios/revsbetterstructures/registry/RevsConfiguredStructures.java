@@ -27,7 +27,10 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_SPRUCETOWER = RevsStructures.SPRUCETOWER.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_NETHERTOWER = RevsStructures.NETHERTOWER.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_DIORITECHAMP = RevsStructures.DIORITECHAMP.get().configured(IFeatureConfig.NONE);
-
+    public static StructureFeature<?, ?> CONFIGURED_FALLENTREE1 = RevsStructures.FALLENTREE1.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_FALLENTREE2 = RevsStructures.FALLENTREE2.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_GIGATREE = RevsStructures.GIGATREE.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_GIGACACTUS = RevsStructures.GIGACACTUS.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -49,6 +52,10 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_sprucetower"), CONFIGURED_SPRUCETOWER);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_nethertower"), CONFIGURED_NETHERTOWER);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_dioritechamp"), CONFIGURED_DIORITECHAMP);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_fallentree1"), CONFIGURED_FALLENTREE1);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_fallentree2"), CONFIGURED_FALLENTREE2);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_gigatree"), CONFIGURED_GIGATREE);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_gigacactus"), CONFIGURED_GIGACACTUS);
 //
 
 
@@ -70,6 +77,10 @@ public class RevsConfiguredStructures {
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.SPRUCETOWER.get(), CONFIGURED_SPRUCETOWER);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.NETHERTOWER.get(), CONFIGURED_NETHERTOWER);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.DIORITECHAMP.get(), CONFIGURED_DIORITECHAMP);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.FALLENTREE1.get(), CONFIGURED_FALLENTREE1);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.FALLENTREE2.get(), CONFIGURED_FALLENTREE2);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.GIGATREE.get(), CONFIGURED_GIGATREE);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.GIGACACTUS.get(), CONFIGURED_GIGACACTUS);
 //
     }
 }
