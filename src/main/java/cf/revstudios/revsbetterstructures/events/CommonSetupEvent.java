@@ -56,6 +56,9 @@ public class CommonSetupEvent {
         tempMap.putIfAbsent(RevsStructures.FALLENTREE2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.FALLENTREE2.get()));
         tempMap.putIfAbsent(RevsStructures.GIGATREE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGATREE.get()));
         tempMap.putIfAbsent(RevsStructures.GIGACACTUS.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGACACTUS.get()));
+        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP.get()));
+        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP2.get()));
+        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP3.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP3.get()));
 
         tempMap.putIfAbsent(RevsStructures.NETHERTOWER.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.NETHERTOWER.get()));
 

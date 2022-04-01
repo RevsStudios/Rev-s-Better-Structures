@@ -31,6 +31,9 @@ public class RevsConfiguredStructures {
     public static StructureFeature<?, ?> CONFIGURED_FALLENTREE2 = RevsStructures.FALLENTREE2.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_GIGATREE = RevsStructures.GIGATREE.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_GIGACACTUS = RevsStructures.GIGACACTUS.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_ROCKCHAMP = RevsStructures.ROCKCHAMP.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_ROCKCHAMP2 = RevsStructures.ROCKCHAMP2.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_ROCKCHAMP3 = RevsStructures.ROCKCHAMP3.get().configured(IFeatureConfig.NONE);
 
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
@@ -56,7 +59,10 @@ public class RevsConfiguredStructures {
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_fallentree2"), CONFIGURED_FALLENTREE2);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_gigatree"), CONFIGURED_GIGATREE);
         Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_gigacactus"), CONFIGURED_GIGACACTUS);
-//
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_rockchamp"), CONFIGURED_ROCKCHAMP);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_rockchamp2"), CONFIGURED_ROCKCHAMP2);
+        Registry.register(registry, new ResourceLocation(RevsBetterStructures.MODID, "configured_rockchamp3"), CONFIGURED_ROCKCHAMP3);
+
 
 
         FlatGenerationSettings.STRUCTURE_FEATURES.put(RevsStructures.WINDMILL.get(), CONFIGURED_WINDMILL);

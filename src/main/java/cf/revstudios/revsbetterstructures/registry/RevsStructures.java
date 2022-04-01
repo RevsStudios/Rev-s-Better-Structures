@@ -42,6 +42,9 @@ public class RevsStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> FALLENTREE2 = STRUCTURES.register("fallentree2", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "fallentree2/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> GIGATREE = STRUCTURES.register("gigatree", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "gigatree/start_pool")));
     public static final RegistryObject<Structure<NoFeatureConfig>> GIGACACTUS = STRUCTURES.register("gigacactus", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "gigacactus/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> ROCKCHAMP = STRUCTURES.register("rockchamp", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "rockchamp/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> ROCKCHAMP2 = STRUCTURES.register("rockchamp2", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "rockchamp2/start_pool")));
+    public static final RegistryObject<Structure<NoFeatureConfig>> ROCKCHAMP3 = STRUCTURES.register("rockchamp3", () -> (new SurfaceDungeonStructure(NoFeatureConfig.CODEC, "rockcham3/start_pool")));
 
     public static void setupStructures() {
         setupMapSpacingAndLand(WINDMILL.get(), new StructureSeparationSettings(827, 825, 3203498), true);
@@ -66,6 +69,9 @@ public class RevsStructures {
         setupMapSpacingAndLand(FALLENTREE2.get(), new StructureSeparationSettings(96, 59, 594518949), true);
         setupMapSpacingAndLand(GIGATREE.get(), new StructureSeparationSettings(896, 859, 81951651), true);
         setupMapSpacingAndLand(GIGACACTUS.get(), new StructureSeparationSettings(896, 859, 418494668), true);
+        setupMapSpacingAndLand(ROCKCHAMP.get(), new StructureSeparationSettings(96, 59, 98498164), true);
+        setupMapSpacingAndLand(ROCKCHAMP2.get(), new StructureSeparationSettings(96, 59, 18718974), true);
+        setupMapSpacingAndLand(ROCKCHAMP3.get(), new StructureSeparationSettings(96, 59, 781984198), true);
 //
     }
 

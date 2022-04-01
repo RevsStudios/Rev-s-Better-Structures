@@ -44,6 +44,9 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_FALLENTREE2);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_GIGATREE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_GIGACACTUS);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP2);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP3);
 
 			}
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.NETHER)) {
