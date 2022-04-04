@@ -66,7 +66,7 @@ public class RevsStructures {
         setupMapSpacingAndLand(NETHERTOWER.get(), new StructureSeparationSettings(896, 859, 2743859), true);
         setupMapSpacingAndLand(DIORITECHAMP.get(), new StructureSeparationSettings(96, 59, 15498198), true);
         setupMapSpacingAndLand(FALLENTREE1.get(), new StructureSeparationSettings(96, 59, 51951594), true);
-        setupMapSpacingAndLand(FALLENTREE2.get(), new StructureSeparationSettings(96, 59, 594518949), true);
+        setupMapSpacingAndLand(FALLENTREE2.get(), new StructureSeparationSettings(96, 59, 841896415), true);
         setupMapSpacingAndLand(GIGATREE.get(), new StructureSeparationSettings(896, 859, 81951651), true);
         setupMapSpacingAndLand(GIGACACTUS.get(), new StructureSeparationSettings(896, 859, 418494668), true);
         setupMapSpacingAndLand(ROCKCHAMP.get(), new StructureSeparationSettings(96, 59, 98498164), true);
