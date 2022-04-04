@@ -4,23 +4,27 @@ Rev's Better Structures add a bunch of new structures, randomly generated small 
 Rev's Better structures is sponsored by Bisect hosting!
 Use code Rev for 25% off at https://bisecthosting.com/REV
 
-FAQ:
+## FAQ:
 
-What does this mod do?
-Rev's Better Structures add brand new structures to improve the normal vannila experience.
+Q:What does this mod do?
 
-What are the biggest structures that can be found?
-The windmil and the Barn
+A:Rev's Better Structures add brand new structures to improve the normal vannila experience.
 
-Who develops this mod?
-Our community, with the community builds, the builders ( Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and Rev! ) And the Coders ( ReVG08 and Blackout. )
+Q:What are the biggest structures that can be found
 
-How can I help the mod improve without buying a bisect server?
-By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
+A:The windmil and the Barn
+
+Q:Who develops this mod?
+
+A:Our community, with the community builds, the builders ( Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and Rev! ) And the Coders ( ReVG08 and Blackout. )
+
+Q:How can I help the mod improve without buying a bisect server?
+
+A:By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
 
 ------------------------------------------------------------------------------------------------
-Credits:
+## Credits:
 
 Coders: ReVG08 and Blackout
 
-Builders: Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and ReVG08
+Builders: Cursed Warrior(formor dev), ElectricKhan, monkeyiskool, Phwee(formor dev) and ReVG08
