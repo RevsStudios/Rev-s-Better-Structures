@@ -1,4 +1,4 @@
-# Rev-s-Better-Structures
+# Rev's-Better-Structures
 Rev's Better Structures add a bunch of new structures, randomly generated small rock chunks, fallen trees, and much more.
 
 Rev's Better structures is sponsored by Bisect hosting!
