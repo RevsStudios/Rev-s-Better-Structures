@@ -23,7 +23,11 @@ A:By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
 
 Coders: ReVG08 and Blackout
 
-Builders: Cursed Warrior(formor developer), ElectricKhan, monkeyiskool, Phwee(formor developer) and ReVG08
+Builders:  ElectricKhan, monkeyiskool and ReVG08
+
+Formor devs:Cursed Warrior,Phwee(l
+
+Website:ReVG08, star
 
 
 
