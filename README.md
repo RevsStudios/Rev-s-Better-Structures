@@ -16,7 +16,7 @@ A:The windmil and the Barn
 
 Q:Who develops this mod?
 
-Our community, with the community builds, the builders ( Cursed Warrior(Formor dev), ElectricKhan, monkeyiskool, Phwee(Formor dev) and Rev! ) And the Coders ( ReVG08 and Blackout. )
+Our community, with the community builds, the builders ( Cursed Warrior(Formor dev), ElectricKhan, monkeyiskool Blackout and Rev! ) And the Coders ( ReVG08 and Blackout. )
 
 Q:How can I help the mod improve without buying a bisect server?
 
@@ -30,7 +30,7 @@ Coders: ReVG08 and Blackout
 
 Builders:  ElectricKhan, monkeyiskool and ReVG08
 
-Formor devs:Cursed Warrior,Phwee
+Formor devs:Cursed Warrior
 
 Website:ReVG08, Asbestosstar
 
