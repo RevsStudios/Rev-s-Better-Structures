@@ -21,6 +21,8 @@ Our community, with the community builds, the builders ( Cursed Warrior(Formor d
 Q:How can I help the mod improve without buying a bisect server?
 
 A:By sending your builds at our [discord]( https://discord.gg/RHqGQUjhDu)
+
+
 ------------------------------------------------------------------------------------------------
 ## Credits:
 
