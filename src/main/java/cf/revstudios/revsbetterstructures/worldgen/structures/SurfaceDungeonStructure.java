@@ -58,7 +58,6 @@ public class SurfaceDungeonStructure extends Structure<NoFeatureConfig> {
 	}
 	
 	public class Start extends StructureStart<NoFeatureConfig> {
-		
 		public Start(Structure<NoFeatureConfig> structureIn, int chunkX, int chunkZ, MutableBoundingBox mutableBoundingBox, int referenceIn, long seedIn) {
 			super(structureIn, chunkX, chunkZ, mutableBoundingBox, referenceIn, seedIn);
 		}

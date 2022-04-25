@@ -17,52 +17,51 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommonSetupEvent {
-    public static void onFMLCommonSetupEvent(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            RevsStructures.setupStructures();
-            RevsConfiguredStructures.registerConfiguredStructures();
-        });
-    }
+	public static void onFMLCommonSetupEvent(final FMLCommonSetupEvent event) {
+		event.enqueueWork(() -> {
+			RevsStructures.setupStructures();
+			RevsConfiguredStructures.registerConfiguredStructures();
+		});
+	}
 
-    public static void addDimensionalSpacing(final WorldEvent.Load event) {
-        if (!(event.getWorld() instanceof ServerWorld)) return;
+	public static void addDimensionalSpacing(final WorldEvent.Load event) {
+		if (!(event.getWorld() instanceof ServerWorld)) return;
 
-        ServerWorld serverWorld = (ServerWorld) event.getWorld();
-        ServerChunkProvider chunkProvider = serverWorld.getChunkSource();
+		ServerWorld serverWorld = (ServerWorld) event.getWorld();
+		ServerChunkProvider chunkProvider = serverWorld.getChunkSource();
 
-        if (serverWorld.getChunkSource().getGenerator() instanceof FlatChunkGenerator && serverWorld.dimension().equals(World.OVERWORLD))
-            return;
+		if (serverWorld.getChunkSource().getGenerator() instanceof FlatChunkGenerator && serverWorld.dimension().equals(World.OVERWORLD))
+			return;
 
-        Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(chunkProvider.generator.getSettings().structureConfig());
+		Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(chunkProvider.generator.getSettings().structureConfig());
 
-        tempMap.putIfAbsent(RevsStructures.WINDMILL.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.WINDMILL.get()));
-        tempMap.putIfAbsent(RevsStructures.SMALLHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SMALLHOUSE.get()));
-        tempMap.putIfAbsent(RevsStructures.CASTLE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.CASTLE.get()));
-        tempMap.putIfAbsent(RevsStructures.BARN.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BARN.get()));
-        tempMap.putIfAbsent(RevsStructures.BLUETEEPE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BLUETEEPE.get()));
-        tempMap.putIfAbsent(RevsStructures.BROWNTEEPE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BROWNTEEPE.get()));
-        tempMap.putIfAbsent(RevsStructures.YELLOWTEEPE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.YELLOWTEEPE.get()));
-        tempMap.putIfAbsent(RevsStructures.COTTAGE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.COTTAGE.get()));
-        tempMap.putIfAbsent(RevsStructures.WANDERCAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.WANDERCAMP.get()));
-        tempMap.putIfAbsent(RevsStructures.ROUNDEDHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROUNDEDHOUSE.get()));
-        tempMap.putIfAbsent(RevsStructures.TENTGREEN.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.TENTGREEN.get()));
-        tempMap.putIfAbsent(RevsStructures.TENTRED.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.TENTRED.get()));
-        tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE.get()));
-        tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE2.get()));
-        tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE3.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE3.get()));
-        tempMap.putIfAbsent(RevsStructures.SPRUCETOWER.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SPRUCETOWER.get()));
-        tempMap.putIfAbsent(RevsStructures.DIORITECHAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.DIORITECHAMP.get()));
-        tempMap.putIfAbsent(RevsStructures.FALLENTREE1.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.FALLENTREE1.get()));
-        tempMap.putIfAbsent(RevsStructures.FALLENTREE2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.FALLENTREE2.get()));
-        tempMap.putIfAbsent(RevsStructures.GIGATREE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGATREE.get()));
-        tempMap.putIfAbsent(RevsStructures.GIGACACTUS.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGACACTUS.get()));
-        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP.get()));
-        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP2.get()));
-        tempMap.putIfAbsent(RevsStructures.ROCKCHAMP3.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP3.get()));
+		tempMap.putIfAbsent(RevsStructures.WINDMILL.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.WINDMILL.get()));
+		tempMap.putIfAbsent(RevsStructures.SMALLHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SMALLHOUSE.get()));
+		tempMap.putIfAbsent(RevsStructures.CASTLE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.CASTLE.get()));
+		tempMap.putIfAbsent(RevsStructures.BARN.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BARN.get()));
+		tempMap.putIfAbsent(RevsStructures.BLUETEEPEE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BLUETEEPEE.get()));
+		tempMap.putIfAbsent(RevsStructures.BROWNTEEPEE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.BROWNTEEPEE.get()));
+		tempMap.putIfAbsent(RevsStructures.YELLOWTEEPEE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.YELLOWTEEPEE.get()));
+		tempMap.putIfAbsent(RevsStructures.COTTAGE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.COTTAGE.get()));
+		tempMap.putIfAbsent(RevsStructures.WANDERCAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.WANDERCAMP.get()));
+		tempMap.putIfAbsent(RevsStructures.ROUNDEDHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROUNDEDHOUSE.get()));
+		tempMap.putIfAbsent(RevsStructures.TENTGREEN.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.TENTGREEN.get()));
+		tempMap.putIfAbsent(RevsStructures.TENTRED.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.TENTRED.get()));
+		tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE.get()));
+		tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE2.get()));
+		tempMap.putIfAbsent(RevsStructures.RUINEDHOUSE3.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.RUINEDHOUSE3.get()));
+		tempMap.putIfAbsent(RevsStructures.SPRUCETOWER.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.SPRUCETOWER.get()));
+		tempMap.putIfAbsent(RevsStructures.DIORITECHAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.DIORITECHAMP.get()));
+		tempMap.putIfAbsent(RevsStructures.FALLENTREE1.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.FALLENTREE1.get()));
+		tempMap.putIfAbsent(RevsStructures.FALLENTREE2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.FALLENTREE2.get()));
+		tempMap.putIfAbsent(RevsStructures.GIGATREE.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGATREE.get()));
+		tempMap.putIfAbsent(RevsStructures.GIGACACTUS.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.GIGACACTUS.get()));
+		tempMap.putIfAbsent(RevsStructures.ROCKCHAMP.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP.get()));
+		tempMap.putIfAbsent(RevsStructures.ROCKCHAMP2.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.ROCKCHAMP2.get()));
 
-        tempMap.putIfAbsent(RevsStructures.NETHERTOWER.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.NETHERTOWER.get()));
+		tempMap.putIfAbsent(RevsStructures.NETHERTOWER.get(), DimensionStructuresSettings.DEFAULTS.get(RevsStructures.NETHERTOWER.get()));
 
 
-        chunkProvider.generator.getSettings().structureConfig = tempMap;
-    }
+		chunkProvider.generator.getSettings().structureConfig = tempMap;
+	}
 }

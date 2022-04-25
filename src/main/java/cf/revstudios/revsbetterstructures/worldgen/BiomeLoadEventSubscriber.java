@@ -27,9 +27,9 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_SMALLHOUSE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_CASTLE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BARN);
-				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BLUETEEPE);
-				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BROWNTEEPE);
-				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_YELLOWTEEPE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BLUETEEPEE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_BROWNTEEPEE);
+				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_YELLOWTEEPEE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_COTTAGE);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_WANDERCAMP);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROUNDEDHOUSE);
@@ -46,12 +46,10 @@ public class BiomeLoadEventSubscriber {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_GIGACACTUS);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP);
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP2);
-				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_ROCKCHAMP3);
 
 			}
 			if (BiomeDictionary.hasType(biome, BiomeDictionary.Type.NETHER)) {
 				builder.addStructureStart(RevsConfiguredStructures.CONFIGURED_NETHERTOWER);
-//
 			}
 		}
 	}

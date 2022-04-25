@@ -1,12 +1,12 @@
 {
-  "name": "revsbetterstructures:brownteepe/start_pool",
+  "name": "revsbetterstructures:yellowteepee/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "revsbetterstructures:brownteepe",
+        "location": "revsbetterstructures:yellowteepee",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }

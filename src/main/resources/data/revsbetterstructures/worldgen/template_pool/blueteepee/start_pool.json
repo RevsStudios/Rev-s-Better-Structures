@@ -1,12 +1,12 @@
 {
-  "name": "revsbetterstructures:rockchamp3/start_pool",
+  "name": "revsbetterstructures:blueteepee/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "revsbetterstructures:rockchamp3",
+        "location": "revsbetterstructures:blueteepee",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }
