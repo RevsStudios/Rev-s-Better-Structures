@@ -1,5 +1,6 @@
 package cf.revstudios.revsbetterstructures.structure;
 
+import cf.revstudios.revsbetterstructures.RevsBetterStructures;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.structure.SimpleStructurePiece;
 import net.minecraft.structure.Structure;
@@ -37,6 +38,7 @@ public class BasicStructurePiece extends SimpleStructurePiece {
     }
 
     private void initializeStructureData(StructureManager structureManager) {
+        RevsBetterStructures.LOGGER.info("Initialize Structure Data Reached");
         Structure structure = structureManager.getStructureOrBlank(this.template);
         StructurePlacementData placementData = (new StructurePlacementData())
                 .setRotation(this.rotation)

@@ -11,6 +11,7 @@ public class RevsBetterStructures implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("Initialize Reached");
         RevsStructureFeatures.register();
     }
 }

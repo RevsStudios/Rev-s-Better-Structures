@@ -3,9 +3,8 @@ package cf.revstudios.revsbetterstructures.structure;
 
 import cf.revstudios.revsbetterstructures.RevsBetterStructures;
 import cf.revstudios.revsbetterstructures.Util;
-import cf.revstudios.revsbetterstructures.structure.BasicStructurePiece;
-import cf.revstudios.revsbetterstructures.structure.features.*;
-import cf.revstudios.revsbetterstructures.structure.pieces.*;
+import cf.revstudios.revsbetterstructures.structure.features.BarnStructureFeature;
+import cf.revstudios.revsbetterstructures.structure.pieces.BarnStructurePiece;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
@@ -20,6 +19,7 @@ import net.minecraft.world.gen.feature.StructureFeature;
 
 public class RevsStructureFeatures {
     public static void register() {
+        RevsBetterStructures.LOGGER.info("Register Structures Reached");
         registerStructure("barn", new BarnStructureFeature(DefaultFeatureConfig.CODEC), BarnStructurePiece::new);
         //registerStructure("blueteepee", new BlueTeepeeStructureFeature(DefaultFeatureConfig.CODEC), BlueTeepeeStructurePiece::new);
         //registerStructure("brownteepee", new BrownTeepeeStructureFeature(DefaultFeatureConfig.CODEC), BrownTeepeeStructurePiece::new);
@@ -46,6 +46,7 @@ public class RevsStructureFeatures {
     }
 
     public static void registerStructure(String structureName, StructureFeature<DefaultFeatureConfig> structureFeature, StructurePieceType piece) {
+        RevsBetterStructures.LOGGER.debug("Register Structures Method Reached");
         final ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeature.configure(DefaultFeatureConfig.DEFAULT);
 
         Registry.register(Registry.STRUCTURE_PIECE, Util.id(structureName + "_piece"), piece);
