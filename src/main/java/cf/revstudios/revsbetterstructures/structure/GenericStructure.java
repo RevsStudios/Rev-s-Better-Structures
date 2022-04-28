@@ -1,4 +1,4 @@
-package cf.revstudios.revsbetterstructures.structure.features;
+package cf.revstudios.revsbetterstructures.structure;
 
 import cf.revstudios.revsbetterstructures.Util;
 import com.mojang.serialization.Codec;
@@ -22,14 +22,17 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 
-public class BarnStructure extends StructureFeature<DefaultFeatureConfig> {
-    public BarnStructure(Codec<DefaultFeatureConfig> codec) {
+public class GenericStructure extends StructureFeature<DefaultFeatureConfig> {
+    private final String structureName;
+
+    public GenericStructure(Codec<DefaultFeatureConfig> codec, String structureName) {
         super(codec);
+        this.structureName = structureName;
     }
 
     @Override
     public StructureStartFactory<DefaultFeatureConfig> getStructureStartFactory() {
-        return BarnStructure.Start::new;
+        return GenericStructure.Start::new;
     }
 
     @Override
@@ -41,7 +44,7 @@ public class BarnStructure extends StructureFeature<DefaultFeatureConfig> {
         return surfaceBlock.getFluidState().isEmpty(); //Disable spawning on water
     }
 
-    public static class Start extends MarginedStructureStart<DefaultFeatureConfig> {
+    public class Start extends MarginedStructureStart<DefaultFeatureConfig> {
         public Start(StructureFeature<DefaultFeatureConfig> structureFeature, int i, int j, BlockBox blockBox, int k, long l) {
             super(structureFeature, i, j, blockBox, k, l);
         }
@@ -56,7 +59,7 @@ public class BarnStructure extends StructureFeature<DefaultFeatureConfig> {
             StructurePoolBasedGenerator.method_30419(
                     registryManager,
                     new StructurePoolFeatureConfig(() -> registryManager.get(Registry.TEMPLATE_POOL_WORLDGEN)
-                            .get(Util.id("barn/start_pool")), 1),
+                            .get(Util.id(structureName + "/start_pool")), 1),
                     PoolStructurePiece::new,
                     chunkGenerator,
                     manager,
