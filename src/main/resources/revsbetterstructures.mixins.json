@@ -4,6 +4,7 @@
   "package": "cf.revstudios.revsbetterstructures.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ChunkGeneratorMixin"
   ],
   "client": [
   ],
