@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "revsbetterstructures",
+  "version": "${version}",
+  "name": "Rev's Better Structures",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/revsbetterstructures/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "cf.revstudios.revsbetterstructures.client.RevsBetterStructuresClient"
+    ],
+    "main": [
+      "cf.revstudios.revsbetterstructures.RevsBetterStructures"
+    ]
+  },
+  "mixins": [
+    "revsbetterstructures.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}
