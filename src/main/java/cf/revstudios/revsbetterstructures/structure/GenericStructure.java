@@ -2,7 +2,6 @@ package cf.revstudios.revsbetterstructures.structure;
 
 import cf.revstudios.revsbetterstructures.Util;
 import com.mojang.serialization.Codec;
-import net.fabricmc.fabric.api.biome.v1.NetherBiomes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.structure.MarginedStructureStart;
@@ -15,7 +14,6 @@ import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.DynamicRegistryManager;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;

@@ -3,9 +3,28 @@
   "id": "revsbetterstructures",
   "version": "${version}",
   "name": "Rev's Better Structures",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "description": "Rev's Better structures adds new and refreshing structures to Minecraft!",
+  "authors": [
+    {
+      "name": "Crosby",
+      "contact": {
+        "discord": "Crosby#9153"
+      }
+    },
+    "ReVG08",
+    "Blackout",
+    "ElectricKhan",
+    "Monkeyiskool"
+  ],
+  "contributors": [
+    "All of Rev's Studios"
+  ],
+  "contact": {
+    "homepage": "https://revstudios.cf/",
+    "sources": "https://github.com/RevsStudios/Rev-s-Better-Structures/tree/Fabric-1.16.5",
+    "issues": "https://github.com/RevsStudios/Rev-s-Better-Structures/issues",
+    "discord": "https://discord.gg/SybwY83umj"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/revsbetterstructures/icon.png",
   "environment": "*",
@@ -14,12 +33,9 @@
       "cf.revstudios.revsbetterstructures.RevsBetterStructures"
     ]
   },
-  "mixins": [
-    "revsbetterstructures.mixins.json"
-  ],
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.12",
     "fabric": "*",
-    "minecraft": "1.16.5"
+    "minecraft": "1.16.x"
   }
 }
