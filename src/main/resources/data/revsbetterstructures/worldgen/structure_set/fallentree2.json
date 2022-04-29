@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "revsbetterstructures:fallentree2",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 96,
+    "separation": 59,
+    "salt": 841896415
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "revsbetterstructures:tentred",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 600,
+    "separation": 586,
+    "salt": 648498484
+  }
+}

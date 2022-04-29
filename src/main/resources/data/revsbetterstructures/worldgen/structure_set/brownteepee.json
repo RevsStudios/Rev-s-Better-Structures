@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "revsbetterstructures:brownteepee",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 558,
+    "separation": 550,
+    "salt": 6154165
+  }
+}

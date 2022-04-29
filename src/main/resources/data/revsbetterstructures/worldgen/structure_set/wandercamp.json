@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "revsbetterstructures:wandercamp",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 428,
+    "separation": 414,
+    "salt": 6157486
+  }
+}

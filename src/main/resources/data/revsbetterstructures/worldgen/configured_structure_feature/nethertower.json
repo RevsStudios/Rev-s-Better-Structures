@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "revsbetterstructures:nethertower",
+    "size": 1
+  },
+  "biomes": "#revsbetterstructures:has_structure/nether",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}
