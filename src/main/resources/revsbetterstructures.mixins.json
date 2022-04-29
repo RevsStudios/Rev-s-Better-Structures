@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cf.revstudios.revsbetterstructures.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "StructureFeatureInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

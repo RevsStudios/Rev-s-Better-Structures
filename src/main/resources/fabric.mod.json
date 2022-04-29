@@ -21,7 +21,7 @@
   ],
   "contact": {
     "homepage": "https://revstudios.cf/",
-    "sources": "https://github.com/RevsStudios/Rev-s-Better-Structures/tree/Fabric-1.17.1",
+    "sources": "https://github.com/RevsStudios/Rev-s-Better-Structures/tree/Fabric-1.18.2",
     "issues": "https://github.com/RevsStudios/Rev-s-Better-Structures/issues",
     "discord": "https://discord.gg/SybwY83umj"
   },
@@ -33,10 +33,13 @@
       "cf.revstudios.revsbetterstructures.RevsBetterStructures"
     ]
   },
+  "mixins": [
+    "revsbetterstructures.mixins.json"
+  ],
   "depends": {
-    "java": ">=16",
-    "fabricloader": ">=0.12",
+    "java": ">=17",
+    "fabricloader": ">=0.13",
     "fabric": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "~1.18.2"
   }
 }

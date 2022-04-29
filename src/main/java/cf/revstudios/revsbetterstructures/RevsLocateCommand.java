@@ -5,12 +5,15 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.structure.StructureSetKeys;
+import net.minecraft.tag.TagKey;
 import net.minecraft.text.*;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 
 import static net.minecraft.server.command.CommandManager.literal;
@@ -23,7 +26,7 @@ public class RevsLocateCommand {
         for (ConfiguredStructureFeature<?, ?> feature : BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE) {
             Identifier id = BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(feature);
             if (id.toString().contains("revsbetterstructures:")) {
-                literalArgumentBuilder = literalArgumentBuilder.then(literal(id.getPath()).executes(ctx -> locate(ctx.getSource(), feature)));
+                literalArgumentBuilder = literalArgumentBuilder.then(literal(id.getPath()).executes(ctx -> locate(ctx.getSource(), id.getPath())));
             }
         }
         dispatcher.register(literalArgumentBuilder);
@@ -45,13 +48,13 @@ public class RevsLocateCommand {
         return MathHelper.sqrt((float)(xDiff * xDiff + yDiff * yDiff));
     }
 
-    private static int locate(ServerCommandSource commandSource, ConfiguredStructureFeature<?, ?> structure) throws CommandSyntaxException {
+    private static int locate(ServerCommandSource commandSource, String structureName) throws CommandSyntaxException {
         BlockPos blockpos = new BlockPos(commandSource.getPosition());
-        BlockPos blockpos1 = commandSource.getWorld().locateStructure(structure.feature, blockpos, 100, false);
+        BlockPos blockpos1 = commandSource.getWorld().locateStructure(TagKey.of(Registry.CONFIGURED_STRUCTURE_FEATURE_KEY, Util.id(structureName)), blockpos, 100, false);
         if (blockpos1 == null) {
             throw ERROR_FAILED.create();
         } else {
-            return showLocateResult(commandSource, structure.feature.getName(), blockpos, blockpos1, "commands.locate.success");
+            return showLocateResult(commandSource, structureName, blockpos, blockpos1, "commands.locate.success");
         }
     }
 }

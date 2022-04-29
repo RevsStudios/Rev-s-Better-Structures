@@ -1,39 +1,50 @@
 package cf.revstudios.revsbetterstructures.structure;
 
-import cf.revstudios.revsbetterstructures.Util;
-import com.mojang.serialization.Codec;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Material;
-import net.minecraft.structure.MarginedStructureStart;
 import net.minecraft.structure.PoolStructurePiece;
-import net.minecraft.structure.StructureManager;
+import net.minecraft.structure.PostPlacementProcessor;
+import net.minecraft.structure.StructureGeneratorFactory;
+import net.minecraft.structure.StructurePiecesGenerator;
 import net.minecraft.structure.pool.StructurePoolBasedGenerator;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.DynamicRegistryManager;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.Heightmap;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.source.BiomeSource;
-import net.minecraft.world.gen.ChunkRandom;
-import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.chunk.VerticalBlockSample;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 
-public class GenericStructure extends StructureFeature<DefaultFeatureConfig> {
+import java.util.Optional;
+
+public class GenericStructure extends StructureFeature<StructurePoolFeatureConfig> {
     private final String structureName;
 
-    public GenericStructure(Codec<DefaultFeatureConfig> codec, String structureName) {
-        super(codec);
+    public GenericStructure(String structureName) {
+        super(StructurePoolFeatureConfig.CODEC, GenericStructure::createPiecesGenerator, PostPlacementProcessor.EMPTY);
         this.structureName = structureName;
     }
 
+    public static Optional<StructurePiecesGenerator<StructurePoolFeatureConfig>> createPiecesGenerator(StructureGeneratorFactory.Context<StructurePoolFeatureConfig> context) {
+        BlockPos blockPos = context.chunkPos().getCenterAtY(0);
+
+        int surfaceHeight = context.chunkGenerator().getHeightInGround(blockPos.getX(), blockPos.getZ(), Heightmap.Type.WORLD_SURFACE_WG, context.world());
+        blockPos = blockPos.up(surfaceHeight + 60);
+
+        Optional<StructurePiecesGenerator<StructurePoolFeatureConfig>> structurePiecesGenerator =
+                StructurePoolBasedGenerator.generate(
+                        context,
+                        PoolStructurePiece::new,
+                        blockPos,
+                        false,
+                        false
+                );
+
+        return structurePiecesGenerator;
+    }
+
+
+    /*
     @Override
     public StructureStartFactory<DefaultFeatureConfig> getStructureStartFactory() {
+        StructureGeneratorFactory.Context<StructurePoolFeatureConfig> context) {
+
+    }
         return GenericStructure.Start::new;
     }
 
@@ -102,4 +113,5 @@ public class GenericStructure extends StructureFeature<DefaultFeatureConfig> {
         }
         return mutable;
     }
+     */
 }
