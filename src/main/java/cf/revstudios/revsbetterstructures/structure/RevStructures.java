@@ -1,14 +1,11 @@
 package cf.revstudios.revsbetterstructures.structure;
 
+import cf.revstudios.revsbetterstructures.RevsBiomeTags;
 import cf.revstudios.revsbetterstructures.Util;
 import cf.revstudios.revsbetterstructures.mixin.StructureFeatureInvoker;
-import net.minecraft.tag.TagKey;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
-import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 
@@ -30,7 +27,7 @@ public class RevStructures {
     public static final StructureFeature<?> RUINEDHOUSE2 = register("ruinedhouse2");
     public static final StructureFeature<?> RUINEDHOUSE3 = register("ruinedhouse3");
     public static final StructureFeature<?> SPRUCETOWER = register("sprucetower");
-    public static final StructureFeature<?> NETHERTOWER = register("nethertower");
+    public static final StructureFeature<?> NETHERTOWER = register("nethertower", RevsBiomeTags.NETHER);
     public static final StructureFeature<?> DIORITECHAMP = register("dioritechamp");
     public static final StructureFeature<?> FALLENTREE1 = register("fallentree1");
     public static final StructureFeature<?> FALLENTREE2 = register("fallentree2");
@@ -42,8 +39,12 @@ public class RevStructures {
     public static void register() {}
 
     private static StructureFeature<?> register(String structureName) {
-        StructureFeature<?> structureFeature = new GenericStructure(structureName);
-        ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeature.configure(StructurePoolFeatureConfig.DEFAULT, TagKey.of(Registry.BIOME_KEY, new Identifier("minecraft", "is_overworld")));
+        return register(structureName, RevsBiomeTags.OVERWORLD_SURFACE)
+    }
+
+    private static StructureFeature<?> register(String structureName, TagKey<Biome> biomeTag) {
+        StructureFeature<?> structureFeature = new GenericStructure();
+        ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeature.configure(StructurePoolFeatureConfig.DEFAULT, biomeTag);
         StructureFeatureInvoker.invokeRegister(Util.strId(structureName), structureFeature, GenerationStep.Feature.SURFACE_STRUCTURES);
         return structureFeature;
     }
