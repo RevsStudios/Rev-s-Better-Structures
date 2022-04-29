@@ -70,15 +70,15 @@ public class SurfaceDungeonStructure extends Structure<NoFeatureConfig> {
 			BlockPos blockpos = new BlockPos(x, 0, z);
 			JigsawManager.addPieces(dynamicRegistryManager,
 				new VillageConfig(() -> dynamicRegistryManager.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY).get(new ResourceLocation(RevsBetterStructures.MODID, path)), 10), AbstractVillagePiece::new,
-				chunkGenerator, templateManagerIn, netherFlag ? SurfaceDungeonStructure.getGround(chunkGenerator, chunkGenerator.getBaseColumn((chunkX << 4) + 7, (chunkZ << 4) + 7), chunkX, chunkZ) : blockpos,
+				chunkGenerator, templateManagerIn, netherFlag ? SurfaceDungeonStructure.getGround(chunkGenerator, chunkGenerator.getBaseColumn(x, z), x, z) : blockpos,
 				pieces, random, false, !netherFlag);
 			
 			this.calculateBoundingBox();
 		}
 	}
 	
-	protected static BlockPos getGround(ChunkGenerator chunkGen, IBlockReader column, int chunkX, int chunkZ) {
-		BlockPos.Mutable mutable = new BlockPos.Mutable((chunkX << 4) + 7, 124, (chunkZ << 4) + 7);
+	protected static BlockPos getGround(ChunkGenerator chunkGen, IBlockReader column, int x, int z) {
+		BlockPos.Mutable mutable = new BlockPos.Mutable(x, 124, z);
 		BlockState currState;
 		while (mutable.getY() > chunkGen.getSeaLevel()) {
 			currState = column.getBlockState(mutable);
