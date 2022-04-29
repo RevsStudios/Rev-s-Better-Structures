@@ -35,7 +35,7 @@ public class RevStructures {
     public static final ConfiguredStructureFeature<?, ?> RUINEDHOUSE2 = register("ruinedhouse2", new StructureConfig(586, 550, 691545156));
     public static final ConfiguredStructureFeature<?, ?> RUINEDHOUSE3 = register("ruinedhouse3", new StructureConfig(586, 550, 23485623));
     public static final ConfiguredStructureFeature<?, ?> SPRUCETOWER = register("sprucetower", new StructureConfig(896, 859, 2743859));
-    public static final ConfiguredStructureFeature<?, ?> NETHERTOWER = register("nethertower", new StructureConfig(896, 859, 2743859));
+    public static final ConfiguredStructureFeature<?, ?> NETHERTOWER = register("nethertower", new StructureConfig(896, 859, 2743859), BiomeSelectors.foundInTheNether());
     public static final ConfiguredStructureFeature<?, ?> DIORITECHAMP = register("dioritechamp", new StructureConfig(96, 59, 15498198));
     public static final ConfiguredStructureFeature<?, ?> FALLENTREE1 = register("fallentree1", new StructureConfig(96, 59, 51951594));
     public static final ConfiguredStructureFeature<?, ?> FALLENTREE2 = register("fallentree2", new StructureConfig(96, 59, 841896415));
@@ -47,7 +47,7 @@ public class RevStructures {
     public static void register() {}
 
     private static ConfiguredStructureFeature<?, ?> register(String structureName, StructureConfig structureConfig) {
-        return register(structureName, structureConfig, BiomeSelectors.all());
+        return register(structureName, structureConfig, BiomeSelectors.foundInOverworld());
     }
 
     private static ConfiguredStructureFeature<?, ?> register(String structureName, StructureConfig structureConfig, Predicate<BiomeSelectionContext> biomeSelectors) {
