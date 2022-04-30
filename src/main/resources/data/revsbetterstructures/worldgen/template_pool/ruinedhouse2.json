@@ -1,0 +1,15 @@
+{
+  "name": "revsbetterstructures:ruinedhouse2",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "revsbetterstructures:ruinedhouse2",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

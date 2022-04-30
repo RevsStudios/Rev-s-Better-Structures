@@ -25,7 +25,7 @@ public class RevsLocateCommand {
         LiteralArgumentBuilder<ServerCommandSource> literalArgumentBuilder = literal("revslocate").requires((player) -> player.hasPermissionLevel(2));
         for (ConfiguredStructureFeature<?, ?> feature : BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE) {
             Identifier id = BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(feature);
-            if (id.toString().contains("revsbetterstructures:")) {
+            if (/*id.toString().contains("revsbetterstructures:")*/true) {
                 literalArgumentBuilder = literalArgumentBuilder.then(literal(id.getPath()).executes(ctx -> locate(ctx.getSource(), id.getPath())));
             }
         }
