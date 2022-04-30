@@ -1,60 +1,30 @@
 package cf.revstudios.revsbetterstructures;
 
+import cf.revstudios.revsbetterstructures.mixin.LocateCommandInvoker;
 import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
+import com.mojang.datafixers.util.Either;
+import net.minecraft.command.argument.RegistryPredicateArgumentType;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.structure.StructureSetKeys;
 import net.minecraft.tag.TagKey;
-import net.minecraft.text.*;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.*;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 
+import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class RevsLocateCommand {
-    private static final SimpleCommandExceptionType ERROR_FAILED = new SimpleCommandExceptionType(new TranslatableText("commands.locate.failed"));
-
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        LiteralArgumentBuilder<ServerCommandSource> literalArgumentBuilder = literal("revslocate").requires((player) -> player.hasPermissionLevel(2));
-        for (ConfiguredStructureFeature<?, ?> feature : BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE) {
-            Identifier id = BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(feature);
-            if (/*id.toString().contains("revsbetterstructures:")*/true) {
-                literalArgumentBuilder = literalArgumentBuilder.then(literal(id.getPath()).executes(ctx -> locate(ctx.getSource(), id.getPath())));
-            }
-        }
-        dispatcher.register(literalArgumentBuilder);
+        dispatcher.register(literal("revslocate").requires(player -> player.hasPermissionLevel(2))
+                .then(argument("structure", new RevsRegistryPredicate())
+                        .executes(context -> {
+                            return execute(context.getSource(), RevsRegistryPredicate.getConfiguredStructureFeaturePredicate(context, "structure"));
+                        })));
     }
 
-    public static int showLocateResult(ServerCommandSource commandSource, String structureName, BlockPos sourcePos, BlockPos structurePos, String successText) {
-        int distance = MathHelper.floor(dist(sourcePos.getX(), sourcePos.getZ(), structurePos.getX(), structurePos.getZ()));
-        Text textComponent = Texts.bracketed(new TranslatableText("chat.coordinates", structurePos.getX(), "~", structurePos.getZ())).styled((style) -> style
-                .withColor(Formatting.GREEN)
-                .withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/tp @s " + structurePos.getX() + " ~ " + structurePos.getZ()))
-                .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TranslatableText("chat.coordinates.tooltip"))));
-        commandSource.sendFeedback(new TranslatableText(successText, structureName, textComponent, distance), false);
-        return distance;
-    }
+    private static int execute(ServerCommandSource source, RegistryPredicateArgumentType.RegistryPredicate<ConfiguredStructureFeature<?, ?>> structureFeature) {
+        Registry<ConfiguredStructureFeature<?, ?>> registry = source.getWorld().getRegistryManager().get(Registry.CONFIGURED_STRUCTURE_FEATURE_KEY);
+        Either<RegistryKey<ConfiguredStructureFeature<?, ?>>, TagKey<ConfiguredStructureFeature<?, ?>>> var10000 = structureFeature.getKey();
 
-    private static float dist(int x1, int y1, int x2, int y2) {
-        int xDiff = x2 - x1;
-        int yDiff = y2 - y1;
-        return MathHelper.sqrt((float)(xDiff * xDiff + yDiff * yDiff));
-    }
-
-    private static int locate(ServerCommandSource commandSource, String structureName) throws CommandSyntaxException {
-        BlockPos blockpos = new BlockPos(commandSource.getPosition());
-        BlockPos blockpos1 = commandSource.getWorld().locateStructure(TagKey.of(Registry.CONFIGURED_STRUCTURE_FEATURE_KEY, Util.id(structureName)), blockpos, 100, false);
-        if (blockpos1 == null) {
-            throw ERROR_FAILED.create();
-        } else {
-            return showLocateResult(commandSource, structureName, blockpos, blockpos1, "commands.locate.success");
-        }
+        return LocateCommandInvoker.invokeExecute(source, structureFeature); //dont know wtf im supposed to do now
     }
 }

@@ -4,6 +4,7 @@
   "package": "cf.revstudios.revsbetterstructures.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "LocateCommandInvoker"
   ],
   "injectors": {
     "defaultRequire": 1
