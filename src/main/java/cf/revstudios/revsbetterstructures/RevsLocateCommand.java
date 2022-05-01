@@ -25,6 +25,6 @@ public class RevsLocateCommand {
         Registry<ConfiguredStructureFeature<?, ?>> registry = source.getWorld().getRegistryManager().get(Registry.CONFIGURED_STRUCTURE_FEATURE_KEY);
         Either<RegistryKey<ConfiguredStructureFeature<?, ?>>, TagKey<ConfiguredStructureFeature<?, ?>>> var10000 = structureFeature.getKey();
 
-        return LocateCommandInvoker.invokeExecute(source, structureFeature); //dont know wtf im supposed to do now
+        return LocateCommandInvoker.invokeExecute(source, structureFeature); //¯\_(ツ)_/¯
     }
 }

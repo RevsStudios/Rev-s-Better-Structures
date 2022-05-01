@@ -4,7 +4,8 @@ import net.minecraft.tag.TagKey;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 
-public class RevsBiomeTags {
+@SuppressWarnings("unused")
+public final class RevsBiomeTags {
     public static final TagKey<Biome> OVERWORLD_SURFACE = register("overworld_surface");
     public static final TagKey<Biome> OVERWORLD_UNDERGROUND = register("overworld_underground");
     public static final TagKey<Biome> NETHER = register("nether");
