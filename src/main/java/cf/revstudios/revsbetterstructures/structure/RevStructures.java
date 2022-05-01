@@ -6,14 +6,13 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
+import net.minecraft.structure.PlainsVillageData;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.chunk.StructureConfig;
-import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraft.world.gen.feature.*;
 
 import java.util.function.Predicate;
 
@@ -51,23 +50,20 @@ public class RevStructures {
     }
 
     private static ConfiguredStructureFeature<?, ?> register(String structureName, StructureConfig structureConfig, Predicate<BiomeSelectionContext> biomeSelectors) {
-        StructureFeature<DefaultFeatureConfig> structure = new GenericStructure(DefaultFeatureConfig.CODEC, structureName);
-        ConfiguredStructureFeature<?, ?> configuredStructure = structure.configure(FeatureConfig.DEFAULT);
+        StructureFeature<StructurePoolFeatureConfig> structure = new GenericStructure(structureName);
+        ConfiguredStructureFeature<?, ?> configuredStructure = structure.configure(new StructurePoolFeatureConfig(() -> PlainsVillageData.STRUCTURE_POOLS, 0));
 
         FabricStructureBuilder.create(Util.id(structureName), structure)
                 .step(GenerationStep.Feature.SURFACE_STRUCTURES)
                 .defaultConfig(structureConfig)
-                .superflatFeature(structure.configure(FeatureConfig.DEFAULT))
                 .adjustsSurface()
                 .register();
 
         Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, Util.id(structureName), configuredStructure);
-        BiomeModifications.create(Util.id(structureName + "_addition"))
-                .add(
-                        ModificationPhase.ADDITIONS,
-                        biomeSelectors,
-                        ctx -> ctx.getGenerationSettings().addBuiltInStructure(configuredStructure)
-                );
+        BiomeModifications.addStructure(
+                biomeSelectors,
+                RegistryKey.of(Registry.CONFIGURED_STRUCTURE_FEATURE_KEY, BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(configuredStructure))
+        );
 
         return configuredStructure;
     }

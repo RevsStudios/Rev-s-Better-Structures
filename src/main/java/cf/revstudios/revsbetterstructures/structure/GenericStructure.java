@@ -4,9 +4,7 @@ import cf.revstudios.revsbetterstructures.Util;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.structure.MarginedStructureStart;
-import net.minecraft.structure.PoolStructurePiece;
-import net.minecraft.structure.StructureManager;
+import net.minecraft.structure.*;
 import net.minecraft.structure.pool.StructurePoolBasedGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -17,85 +15,79 @@ import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSource;
-import net.minecraft.world.gen.ChunkRandom;
+import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.VerticalBlockSample;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 
-public class GenericStructure extends StructureFeature<DefaultFeatureConfig> {
-    private final String structureName;
+import java.util.Optional;
 
-    public GenericStructure(Codec<DefaultFeatureConfig> codec, String structureName) {
-        super(codec);
-        this.structureName = structureName;
+public class GenericStructure extends StructureFeature<StructurePoolFeatureConfig> {
+    public GenericStructure(String structureName) {
+        super(StructurePoolFeatureConfig.CODEC, (context) -> GenericStructure.createPiecesGenerator(context, structureName), PostPlacementProcessor.EMPTY);
     }
 
-    @Override
-    public StructureStartFactory<DefaultFeatureConfig> getStructureStartFactory() {
-        return GenericStructure.Start::new;
+    private static boolean isFeatureChunk(StructureGeneratorFactory.Context<StructurePoolFeatureConfig> context) {
+        BlockPos chunkCenter = context.chunkPos().getCenterAtY(0);
+        int surface = context.chunkGenerator().getHeightInGround(chunkCenter.getX(), chunkCenter.getZ(), Heightmap.Type.WORLD_SURFACE_WG, context.world());
+        VerticalBlockSample column = context.chunkGenerator().getColumnSample(chunkCenter.getX(), chunkCenter.getZ(), context.world());
+        BlockState surfaceBlock = column.getState(surface);
+        return surfaceBlock.getFluidState().isEmpty(); //Check for water
     }
 
-    @Override
-    protected boolean shouldStartAt(ChunkGenerator chunkGenerator, BiomeSource biomeSource, long worldSeed, ChunkRandom random, ChunkPos chunkPos, Biome biome, ChunkPos chunkPos2, DefaultFeatureConfig config, HeightLimitView heightLimitView) {
-        BlockPos chunkCenter = new BlockPos(chunkPos.x * 16, 0, chunkPos.x * 16);
-        int surfaceHeight = chunkGenerator.getHeightInGround(chunkCenter.getX(), chunkCenter.getZ(), Heightmap.Type.WORLD_SURFACE_WG, heightLimitView);
-        VerticalBlockSample blockColumn = chunkGenerator.getColumnSample(chunkCenter.getX(), chunkCenter.getZ(), heightLimitView);
-        BlockState surfaceBlock = blockColumn.getState(chunkCenter.up(surfaceHeight));
-        return surfaceBlock.getFluidState().isEmpty(); //Disable spawning on water
-    }
-
-    public class Start extends MarginedStructureStart<DefaultFeatureConfig> {
-        public Start(StructureFeature<DefaultFeatureConfig> structureFeature, ChunkPos chunkPos, int reference, long seed) {
-            super(structureFeature, chunkPos, reference, seed);
+    public static Optional<StructurePiecesGenerator<StructurePoolFeatureConfig>> createPiecesGenerator(StructureGeneratorFactory.Context<StructurePoolFeatureConfig> context, String structureName) {
+        if (!GenericStructure.isFeatureChunk(context)) {
+            return Optional.empty();
         }
 
-        @Override
-        public void init(DynamicRegistryManager registryManager, ChunkGenerator chunkGenerator, StructureManager manager, ChunkPos chunkPos, Biome biome, DefaultFeatureConfig config, HeightLimitView heightLimitView) {
-            int x = chunkPos.x * 16;
-            int y = 0;
-            int z = chunkPos.z * 16;
+        StructurePoolFeatureConfig config = new StructurePoolFeatureConfig(
+                () -> context.registryManager().get(Registry.STRUCTURE_POOL_KEY).get(Util.id(structureName)),
+                1
+        );
 
-            BlockPos.Mutable blockPos = new BlockPos.Mutable(x, y, z);
+        StructureGeneratorFactory.Context<StructurePoolFeatureConfig> newContext = new StructureGeneratorFactory.Context<>(
+                context.chunkGenerator(),
+                context.biomeSource(),
+                context.seed(),
+                context.chunkPos(),
+                config,
+                context.world(),
+                context.validBiome(),
+                context.structureManager(),
+                context.registryManager()
+        );
 
-            boolean nether = biome.getCategory() == Biome.Category.NETHER;
-            if (nether) {
-                blockPos = getGround(chunkGenerator, x, z, heightLimitView);
-            }
 
-            StructurePoolBasedGenerator.generate(
-                    registryManager,
-                    new StructurePoolFeatureConfig(() -> registryManager.get(Registry.STRUCTURE_POOL_KEY)
-                            .get(Util.id(structureName + "/start_pool")), 1),
-                    PoolStructurePiece::new,
-                    chunkGenerator,
-                    manager,
-                    blockPos,
-                    this,
-                    this.random,
-                    false,
-                    !nether,
-                    heightLimitView
-            );
-
-            this.children.forEach(piece -> piece.translate(0, 2, 0)); //Raise structures by 1 block
-
-            this.setBoundingBoxFromChildren();
+        BlockPos blockPos = context.chunkPos().getCenterAtY(0);
+        boolean nether = context.chunkGenerator().getBiomeForNoiseGen(blockPos.getX(), blockPos.getY(), blockPos.getZ()).getCategory().equals(Biome.Category.NETHER);
+        if (nether) {
+            blockPos = getGround(context.chunkGenerator(), blockPos.getX(), blockPos.getZ(), context.world());
         }
+
+        return StructurePoolBasedGenerator.generate(
+                newContext, // Used for StructurePoolBasedGenerator to get all the proper behaviors done.
+                PoolStructurePiece::new, // Needed in order to create a list of jigsaw pieces when making the structure's layout.
+                blockPos, // Position of the structure. Y value is ignored if last parameter is set to true.
+                false,  // Special boundary adjustments for villages. It's... hard to explain. Keep this false and make your pieces not be partially intersecting.
+                // Either not intersecting or fully contained will make children pieces spawn just fine. It's easier that way.
+                !nether // Place at heightmap (top land). Set this to false for structure to be place at the passed in blockpos's Y value instead.
+                // Definitely keep this false when placing structures in the nether as otherwise, heightmap placing will put the structure on the Bedrock roof.
+        );
     }
 
-    protected static BlockPos.Mutable getGround(ChunkGenerator chunkGenerator, int x, int z, HeightLimitView heightLimitView) {
+    private static BlockPos.Mutable getGround(ChunkGenerator chunkGenerator, int x, int z, HeightLimitView heightLimitView) {
         VerticalBlockSample column = chunkGenerator.getColumnSample(x, z, heightLimitView);
         BlockPos.Mutable mutable = new BlockPos.Mutable(x, 124, z);
         BlockState blockState;
         while (mutable.getY() > chunkGenerator.getSeaLevel()) {
-            blockState = column.getState(mutable);
+            blockState = column.getState(mutable.getY());
 
             if (!blockState.isOpaque()) {
                 mutable.move(Direction.DOWN);
                 continue;
-            } else if (column.getState(mutable.add(0, 3, 0)).getMaterial() == Material.AIR) {
+            } else if (column.getState(mutable.getY() + 3).getMaterial() == Material.AIR) {
                 break;
             }
             mutable.move(Direction.DOWN);
