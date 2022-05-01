@@ -29,7 +29,9 @@ public class RevsRegistryPredicate extends RegistryPredicateArgumentType<Configu
                     Collection<Suggestion> toSend = Lists.newArrayList();
                     for (var suggestion : suggestions.getList()) {
                         if (suggestion.getText().contains("revsbetterstructures:")) {
-                            toSend.add(new Suggestion(suggestion.getRange(), suggestion.getText().replace("revsbetterstructures:", ""), suggestion.getTooltip()));
+                            String newText = suggestion.getText();
+                            //newText = newText.replace("revsbetterstructures:", "")
+                            toSend.add(new Suggestion(suggestion.getRange(), newText, suggestion.getTooltip()));
                         }
                     }
                     return Suggestions.create("revslocate", toSend);

@@ -13,7 +13,7 @@ public class RevsBetterStructures implements ModInitializer {
     @Override
     public void onInitialize() {
         CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> {
-            if (FabricLoader.getInstance().isDevelopmentEnvironment()) RevsLocateCommand.register(dispatcher);
+            RevsLocateCommand.register(dispatcher);
         }));
     }
 }
