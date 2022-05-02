@@ -21,6 +21,6 @@ By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
 ------------------------------------------------------------------------------------------------
 Credits:
 
-Coders: ReVG08 and Blackout
+Coders: ReVG08, Blackout and Crosby
 
 Builders: Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and ReVG08
