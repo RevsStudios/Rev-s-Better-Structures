@@ -5,12 +5,7 @@
   "name": "Rev's Better Structures",
   "description": "Rev's Better structures adds new and refreshing structures to Minecraft!",
   "authors": [
-    {
-      "name": "Crosby",
-      "contact": {
-        "discord": "Crosby#9153"
-      }
-    },
+    "Crosby",
     "ReVG08",
     "Blackout",
     "ElectricKhan",
@@ -40,6 +35,6 @@
     "java": ">=17",
     "fabricloader": ">=0.13",
     "fabric": "*",
-    "minecraft": "~1.18.2"
+    "minecraft": "~1.19"
   }
 }
