@@ -1,26 +1,57 @@
-# Rev-s-Better-Structures
-Rev's Better Structures add a bunch of new structures, randomly generated small rock chunks, fallen trees, and much more.
+# 🏗️ Rev's Better Structures
 
-Rev's Better structures is sponsored by Bisect hosting!
-Use code Rev for 25% off at https://bisecthosting.com/REV
+**Rev’s Better Structures** is a Minecraft mod that adds brand new, randomly generated structures to your world — including small rock chunks, fallen trees, barns, windmills, and much more!  
+Designed to enhance the vanilla experience, each structure is carefully crafted or submitted by the community.
 
-FAQ:
+> 💎 **Sponsored by [Bisect Hosting](https://bisecthosting.com/REV)**  
+> Use code `REV` for **25% off** your first server!
 
-What does this mod do?
-Rev's Better Structures add brand new structures to improve the normal vannila experience.
+---
 
-What are the biggest structures that can be found?
-The windmil and the Barn
+## ❓ FAQ
 
-Who develops this mod?
-Our community, with the community builds, the builders ( Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and Rev! ) And the Coders ( ReVG08 and Blackout. )
+### 🔧 What does this mod do?
+Rev’s Better Structures introduces fresh, procedurally generated structures into Minecraft, making exploration more exciting while maintaining the charm of vanilla gameplay.
 
-How can I help the mod improve without buying a bisect server?
-By sending your builds at our discord! https://discord.gg/RHqGQUjhDu
+### 🏰 What are the biggest structures I can find?
+Currently, the **Windmill** and the **Barn** are the largest and most impressive structures in the mod.
 
-------------------------------------------------------------------------------------------------
-Credits:
+### 👥 Who develops this mod?
+This mod is built by a passionate team and supported by our amazing community!
 
-Coders: ReVG08, Blackout and Crosby
+**Builders:**
+- Cursed Warrior  
+- ElectricKhan  
+- monkeyiskool  
+- Phwee  
+- Rev
 
-Builders: Cursed Warrior, ElectricKhan, monkeyiskool, Phwee and ReVG08
+**Coders:**
+- ReVG08  
+- Blackout
+
+### 🧱 How can I help improve the mod?
+Want to contribute without buying a Bisect server?  
+Submit your original builds to be featured in the mod on our Discord server!
+
+👉 [Join us on Discord](https://discord.gg/RHqGQUjhDu)
+
+---
+
+## 🙌 Credits
+
+**Coders**
+- ReVG08  
+- Blackout  
+- Crosby
+
+**Builders**
+- Cursed Warrior  
+- ElectricKhan  
+- monkeyiskool  
+- Phwee  
+- ReVG08
+
+---
+
+Made with ❤️ by the community & Renato Gloe.
